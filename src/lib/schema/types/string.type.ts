@@ -1,23 +1,31 @@
-import { BaseSchema } from './base.schema';
+/**
+ * @name StringType
+ * @type Number
+ * @description StringType
+ */
 
-export class StringSchema extends BaseSchema<string> {
-	protected location: string;
-	protected metaData: any;
-	protected schema: string[];
-	constructor(protected fieldName: string) {
+import { BaseType } from './base.type';
+
+export class StringType extends BaseType<string> {
+	protected _metaData: any;
+	protected _schema: string[];
+	constructor(
+		protected _location: string,
+		protected _fieldName: string,
+	) {
 		super();
 	}
 	/**
 	 * @type Filter
 	 */
-	alphanum(): StringSchema {
+	alphanum(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	regex(): StringSchema {
+	regex(): this {
 		// check for regex
 		return this;
 	}
@@ -25,7 +33,7 @@ export class StringSchema extends BaseSchema<string> {
 	 * @type Modifier, Filter
 	 * @description Lowercase value or filter lowercase value
 	 */
-	lowercase(convert: boolean = true): StringSchema {
+	lowercase(convert: boolean = true): this {
 		// TO DO
 		return this;
 	}
@@ -33,7 +41,7 @@ export class StringSchema extends BaseSchema<string> {
 	 * @type Modifier, Filter
 	 * @description Upercase value or filter upercase value
 	 */
-	uppercase(convert: boolean = true): StringSchema {
+	uppercase(convert: boolean = true): this {
 		// TO DO
 		return this;
 	}
@@ -41,105 +49,105 @@ export class StringSchema extends BaseSchema<string> {
 	 * @type Modifier, Filter
 	 * @description Trim value or filter trimmed value 
 	 */
-	trim(convert: boolean = true): StringSchema {
+	trim(convert: boolean = true): this {
 		// trim value or check if value trim
 		return this;
 	}
 	/**
 	 * @type Modifier, Filter
 	 */
-	trimEnd(convert: boolean = true): StringSchema {
+	trimEnd(convert: boolean = true): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Modifier, Filter
 	 */
-	trimStart(convert: boolean = true): StringSchema {
+	trimStart(convert: boolean = true): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	replace(): StringSchema {
+	replace(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	truncate(): StringSchema {
+	truncate(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	email(): StringSchema {
+	email(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	isoDate(): StringSchema {
+	isoDate(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	jwt(): StringSchema {
+	jwt(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	uri(): StringSchema {
+	uri(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	dataUri(): StringSchema {
+	dataUri(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	ip(): StringSchema {
+	ip(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	creditCard(): StringSchema {
+	creditCard(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Filter
 	 */
-	hostname(): StringSchema {
+	hostname(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Modifier
 	 */
-	normalize(): StringSchema {
+	normalize(): this {
 		// check for alphanum value
 		return this;
 	}
 	/**
 	 * @type Modifier
 	 */
-	split(): StringSchema {
+	split(): this {
 		// check for alphanum value
 		return this;
 	}

@@ -1,8 +1,14 @@
+/**
+ * @name BaseType
+ * @type Generic
+ * @description BaseType
+ */
 
-export abstract class BaseSchema<T> {
-	protected abstract location: string;
-	protected abstract fieldName: string;
-	protected abstract metaData: any;
+export abstract class BaseType<T> {
+	protected abstract _location: string;
+	protected abstract _fieldName: string;
+	protected abstract _metaData: any;
+	protected abstract _schema: string[];
 	/**
 	 * @type Filter
 	 * @description This allow the given argument values to be truthy for filter.
@@ -61,15 +67,45 @@ export abstract class BaseSchema<T> {
 		// TO DO
 		return this;
 	}
+	/**
+	 * @type MetaData
+	 * @description This function will set the description metadata to given value.
+	 */
 	description(): this {
 		// TO DO
 		return this;
 	}
+	/**
+	 * @type Filter, Modifier
+	 * @description This function will accept a custom validator function.
+	 */
 	custom(cb: (value: T) => void): this {
 		// TO DO
 		return this;
 	}
+	/**
+	 * @type Filter
+	 * @description This function check equal filter to given value.
+	 */
 	equalTo(value: T): this {
+		// TO DO
+		return this;
+	}
+	/**
+	 * @type MetaData
+	 * @description This function set location metdata.
+	 * @param location Location identifier.
+	 */
+	location(loc: string): this {
+		// TO DO
+		return this;
+	}
+	/**
+	 * @type Filter
+	 * @description This function validate.
+	 * @param values Location identifier.
+	 */
+	enum(...values: T[]): this {
 		// TO DO
 		return this;
 	}

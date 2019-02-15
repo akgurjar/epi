@@ -11,7 +11,8 @@
         "no-namespace": false,
         "interface-name": false,
         "no-reference": false,
-        "member-access": [true, "no-public"]
+        "member-access": [true, "no-public"],
+        "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
     },
     "rulesDirectory": []
 }

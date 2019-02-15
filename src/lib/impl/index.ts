@@ -1,18 +1,5 @@
+import { BodyLocation } from '../schema/index';
 
-
-
-export interface IEmail {
-    email(): string;
-}
-
-export interface IString {
-    email(): IEmail;
-}
-
-export interface INumber {
-    number(): string;
-}
-
-export interface IBoolean {
-    boolean(): string;
+export function body(field: string) {
+	return new BodyLocation(field);
 }
