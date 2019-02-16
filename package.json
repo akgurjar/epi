@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "repository": "https://github.com/akgurjar/express-api.git",
   "author": "Ashish Gurjar <ashishkgurjar@gmail.com>",
-  "license": "GNU",
+  "license": "GPL-3.0",
   "private": false,
   "scripts": {
     "start": "webpack-dev-server",

@@ -4,17 +4,9 @@
  * @description NumberType
  */
 
-import { BaseType } from './base.type';
+import { AnyType } from './any.type';
 
-export class NumberType extends BaseType<number> {
-	protected _metaData: any;
-	protected _schema: string[];
-	constructor(
-		protected _location: string,
-		protected _fieldName: string,
-	) {
-		super();
-	}
+export class NumberType extends AnyType<number> {
 	integer(convert: boolean = false): this {
 		// TO DO
 		return this;

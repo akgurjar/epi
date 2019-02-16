@@ -1,7 +1,7 @@
 import { BaseLocation } from './base.location';
 
 export class HeaderLocation extends BaseLocation {
-	constructor(fieldName: string) {
-		super('header', fieldName);
+	constructor(...fieldNames: string[]) {
+		super('header', fieldNames);
 	}
 }

@@ -1,25 +1,18 @@
 /**
  * @name StringType
- * @type Number
+ * @type String
  * @description StringType
  */
 
-import { BaseType } from './base.type';
+import { AnyType } from './any.type';
 
-export class StringType extends BaseType<string> {
-	protected _metaData: any;
-	protected _schema: string[];
-	constructor(
-		protected _location: string,
-		protected _fieldName: string,
-	) {
-		super();
-	}
+export class StringType extends AnyType<string> {
 	/**
 	 * @type Filter
 	 */
 	alphanum(): this {
 		// check for alphanum value
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**
@@ -35,6 +28,7 @@ export class StringType extends BaseType<string> {
 	 */
 	lowercase(convert: boolean = true): this {
 		// TO DO
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**
@@ -43,6 +37,7 @@ export class StringType extends BaseType<string> {
 	 */
 	uppercase(convert: boolean = true): this {
 		// TO DO
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**
@@ -51,6 +46,7 @@ export class StringType extends BaseType<string> {
 	 */
 	trim(convert: boolean = true): this {
 		// trim value or check if value trim
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**
@@ -58,6 +54,7 @@ export class StringType extends BaseType<string> {
 	 */
 	trimEnd(convert: boolean = true): this {
 		// check for alphanum value
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**
@@ -65,6 +62,7 @@ export class StringType extends BaseType<string> {
 	 */
 	trimStart(convert: boolean = true): this {
 		// check for alphanum value
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**
@@ -86,6 +84,7 @@ export class StringType extends BaseType<string> {
 	 */
 	email(): this {
 		// check for alphanum value
+		this._schema.flags.push('email');
 		return this;
 	}
 	/**
@@ -93,6 +92,7 @@ export class StringType extends BaseType<string> {
 	 */
 	isoDate(): this {
 		// check for alphanum value
+		this._schema.flags.push('isoDate');
 		return this;
 	}
 	/**
@@ -100,6 +100,7 @@ export class StringType extends BaseType<string> {
 	 */
 	jwt(): this {
 		// check for alphanum value
+		this._schema.flags.push('jwt');
 		return this;
 	}
 	/**
@@ -107,6 +108,7 @@ export class StringType extends BaseType<string> {
 	 */
 	uri(): this {
 		// check for alphanum value
+		this._schema.flags.push('uri');
 		return this;
 	}
 	/**
@@ -114,6 +116,7 @@ export class StringType extends BaseType<string> {
 	 */
 	dataUri(): this {
 		// check for alphanum value
+		this._schema.flags.push('dataUri');
 		return this;
 	}
 	/**
@@ -121,6 +124,7 @@ export class StringType extends BaseType<string> {
 	 */
 	ip(): this {
 		// check for alphanum value
+		this._schema.flags.push('alphanum');
 		return this;
 	}
 	/**

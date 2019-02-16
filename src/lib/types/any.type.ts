@@ -1,14 +1,13 @@
 /**
- * @name BaseType
- * @type Generic
- * @description BaseType
+ * @name AnyType
+ * @type Any
+ * @description AnyType
  */
 
-export abstract class BaseType<T> {
-	protected abstract _location: string;
-	protected abstract _fieldName: string;
-	protected abstract _metaData: any;
-	protected abstract _schema: string[];
+import { EpiSchema } from '../schema';
+
+export abstract class AnyType<T> {
+	protected _schema: EpiSchema = new EpiSchema();
 	/**
 	 * @type Filter
 	 * @description This allow the given argument values to be truthy for filter.
@@ -108,5 +107,14 @@ export abstract class BaseType<T> {
 	enum(...values: T[]): this {
 		// TO DO
 		return this;
+	}
+	/**
+	 * @type Filter
+	 * @description bla bla bla
+	 */
+	validate() {
+		return (req: any, res: any, next: any) => {
+			next();
+		};
 	}
 }
