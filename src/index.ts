@@ -1,3 +1,3 @@
 
 // export * from './lib/index';
-import { body } from './lib/index';
+// import { body, method } from './lib/index';

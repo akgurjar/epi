@@ -4,7 +4,7 @@
         "outDir": "dist/",
         "noImplicitAny": true,
         "removeComments": true,
-        "preserveConstEnums": true,
+        "experimentalDecorators": true,
         "sourceMap": true,
         "declaration": true,
         "target": "es5",

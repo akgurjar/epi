@@ -2,7 +2,7 @@
  * @description All validator flags.
  */
 
-import {} from '../schema';
+import {} from '../schema/schema';
 
 function trim() {
 	//

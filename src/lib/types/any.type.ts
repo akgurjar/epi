@@ -4,7 +4,7 @@
  * @description AnyType
  */
 
-import { EpiSchema } from '../schema';
+import { EpiSchema, Flag } from '../schema/index';
 
 export abstract class AnyType<T> {
 	protected _schema: EpiSchema = new EpiSchema();
@@ -15,6 +15,7 @@ export abstract class AnyType<T> {
 	 */
 	allow(...values: T[]): this {
 		// TO DO
+		this._schema.flags.push(new Flag('allow', {data: values}));
 		return this;
 	}
 	/**
