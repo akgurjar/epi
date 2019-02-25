@@ -1,4 +1,4 @@
 
-export * from './types/index';
-export * from './locations/index';
-export * from './functions/index';
+export * from './decorator';
+export * from './schema';
+export * from './resource';

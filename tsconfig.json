@@ -1,20 +1,26 @@
 {
-    "compilerOptions": {
-        "rootDir": "src/",
-        "outDir": "dist/",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "experimentalDecorators": true,
-        "sourceMap": true,
-        "declaration": true,
-        "target": "es5",
-        "module":"es2015",
-        "lib": ["es2015", "es2016", "es2017"],
-        "typeRoots": [
-            "node_modules/@types/*"
-        ]
-    },
-    "include": [
-        "src"
-    ]
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "es2018"
+    ],
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "removeComments": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "alwaysStrict": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "baseUrl": "./src/",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
 }

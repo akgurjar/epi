@@ -1,25 +1,20 @@
 {
   "name": "epi",
   "version": "1.0.0",
-  "description": "A express api documentor..",
-  "main": "dist/lts.js",
-  "types": "dist/index.d.ts",
-  "repository": "https://github.com/akgurjar/express-api.git",
+  "main": "index.js",
+  "repository": "https://github.com/akgurjar/epi.git",
   "author": "Ashish Gurjar <ashishkgurjar@gmail.com>",
-  "license": "GPL-3.0",
+  "license": "GPL-3.0-or-later",
   "private": false,
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack",
-    "lint": "tslint -p tsconfig.json"
+    "start": "ts-node-dev ./demo/app.ts"
+  },
+  "dependencies": {
+    "typescript": "^3.3.3333"
   },
   "devDependencies": {
-    "html-webpack-plugin": "^3.2.0",
-    "ts-loader": "^5.3.3",
-    "tslint": "^5.12.1",
-    "typescript": "^3.3.1",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
+    "express": "^4.16.4",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "tslint": "^5.13.0"
   }
 }
