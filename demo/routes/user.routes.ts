@@ -1,15 +1,13 @@
 import { Resource } from '../../src';
-import { Request, Response } from 'express';
 import { UserSchema } from '../schema';
+import { controller } from '../controllers';
 
-const resource = new Resource('user', new UserSchema());
+const user = new Resource('user', new UserSchema());
 
-resource.onCreate(function(req: Request, res: Response) {
-    console.log(req.url);
-    res.json({
-        message: 'User Created.',
-        result: null
-    });
-});
+user.onCreate(controller.create);
 
-export default resource;
+user.onList(controller.list);
+
+user.onUpdate(controller.update);
+
+export default user;
